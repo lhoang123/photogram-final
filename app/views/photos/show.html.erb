@@ -53,7 +53,9 @@
       Fan
     </dt>
     <dd>
-       #fan name
+        <% @the_photo.fans.each do |fan| %>
+        <%= fan.username %>
+        <% end %>
     </dd>
 
     <dt>
