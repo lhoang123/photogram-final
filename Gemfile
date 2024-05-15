@@ -75,7 +75,7 @@ end
 # ===========
 gem "appdev_support"
 gem "awesome_print"
-gem "devise"       
+#gem "devise"       
 gem "dotenv-rails"
 gem "faker"
 gem "htmlbeautifier"
