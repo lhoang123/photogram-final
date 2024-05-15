@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_05_15_041452) do
+ActiveRecord::Schema[7.0].define(version: 2024_05_15_065522) do
   create_table "comments", force: :cascade do |t|
     t.integer "author_id"
     t.text "body"
@@ -36,12 +36,12 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_15_041452) do
 
   create_table "photos", force: :cascade do |t|
     t.text "caption"
-    t.integer "comment_count"
     t.string "image"
     t.integer "likes_count"
     t.integer "owner_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "comments_count"
   end
 
   create_table "users", force: :cascade do |t|
@@ -56,6 +56,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_15_041452) do
     t.integer "comments_count"
     t.string "likes_count"
     t.boolean "private"
+    t.string "like_counts"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
