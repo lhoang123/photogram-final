@@ -431,6 +431,7 @@ DEPENDENCIES
   capybara
   carrierwave
   debug
+  devise
   dotenv-rails
   draft_generators
   draft_matchers
