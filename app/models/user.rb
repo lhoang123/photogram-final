@@ -27,4 +27,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   # Devise modules and other User model content
+
+  # User#own_photos: returns rows from the photos table  associated to this user by the owner_id column
+  has_many(:own_photos, class_name: "Photo", foreign_key: "owner_id")
 end

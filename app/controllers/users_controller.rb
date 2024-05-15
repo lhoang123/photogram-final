@@ -13,10 +13,6 @@ class UsersController < ApplicationController
     matching_users = User.where({ :username => the_username})
 
     @the_user = matching_users.at(0)
-    
-    @the_id = @the_user.id
-
-    @matching_photos = Photo.where({ :owner_id => @the_id })
 
     render({ :template => "users/show" })
   end
