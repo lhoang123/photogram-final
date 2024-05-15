@@ -12,4 +12,7 @@
 #  owner_id       :integer
 #
 class Photo < ApplicationRecord
+  validates(:poster, { :presence => true })
+  
+  belongs_to(:poster, class_name: "User", foreign_key: "owner_id")
 end
