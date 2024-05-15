@@ -6,6 +6,27 @@
   </head>
 
   <body>
+    <nav>
+      <li>
+        <a href="/users">All users</a>
+      </li>
+
+      <li>
+        <a href="/photos">All public photos</a>
+      </li>
+
+        <% if current_user != nil %>
+          <li><a href="/users/edit"><%= current_user.username %></a></li>
+          <li><a href="/users/sign_out">Sign out</a></li>
+
+        <% else %>
+         <li> <a href="/users/sign_up">Sign up</a> </i>
+
+         <li> <a href="/users/sign_in">Log in</a></li>
+
+        <% end %>
+    </nav>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
