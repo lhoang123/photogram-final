@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_05_15_035029) do
+ActiveRecord::Schema[7.0].define(version: 2024_05_15_041452) do
   create_table "comments", force: :cascade do |t|
     t.integer "author_id"
     t.text "body"
@@ -56,7 +56,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_15_035029) do
     t.integer "comments_count"
     t.string "likes_count"
     t.boolean "private"
-    t.integer "like_counts"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
