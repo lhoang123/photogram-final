@@ -75,14 +75,14 @@ end
 # ===========
 gem "appdev_support"
 gem "awesome_print"
-gem "devise"       # to be removed
+gem "devise"       
 gem "dotenv-rails"
 gem "faker"
 gem "htmlbeautifier"
 gem "http"
 gem "sqlite3", "~> 1.4"
 gem "table_print"
-gem "simple_form" # necessary for devise view templates
+gem "simple_form" 
 
 group :development do
   gem "annotate"
